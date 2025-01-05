@@ -1,0 +1,56 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-mmcu=atmega328p",
+      "-DF_CPU=16000000UL",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/eeprom.o",
+      "src/eeprom.c"
+    ],
+    "directory": "/home/umi/code/libumi",
+    "file": "/home/umi/code/libumi/src/eeprom.c",
+    "output": "/home/umi/code/libumi/obj/eeprom.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-mmcu=atmega328p",
+      "-DF_CPU=16000000UL",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/usart.o",
+      "src/usart.c"
+    ],
+    "directory": "/home/umi/code/libumi",
+    "file": "/home/umi/code/libumi/src/usart.c",
+    "output": "/home/umi/code/libumi/obj/usart.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-mmcu=atmega328p",
+      "-DF_CPU=16000000UL",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/utils.o",
+      "src/utils.c"
+    ],
+    "directory": "/home/umi/code/libumi",
+    "file": "/home/umi/code/libumi/src/utils.c",
+    "output": "/home/umi/code/libumi/obj/utils.o"
+  }
+]
