@@ -12,7 +12,7 @@ void clearPin(volatile uint8_t *reg, uint8_t pin)
 
 uint8_t readPin(volatile uint8_t *reg, uint8_t pin)
 {
-    return *reg & (1 << pin);
+    return (*reg & (1 << pin)) ? 1 : 0;
 }
 
 void maskWrite(volatile uint8_t *reg, uint8_t mask, uint8_t value)
