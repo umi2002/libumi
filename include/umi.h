@@ -13,6 +13,7 @@ void USARTTransmit(uint8_t data);
 // eeprom.c
 void EEPROMwrite(uint16_t address, uint8_t data);
 uint8_t EEPROMread(uint16_t address);
+void USARTTransmitStr(uint8_t *str);
 
 // keypad.c
 void keypadInit();

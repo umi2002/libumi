@@ -27,3 +27,14 @@ void USARTTransmit(uint8_t data)
     // Put data into buffer, sends the data
     UDR0 = data;
 }
+
+void USARTTransmitStr(uint8_t *str)
+{
+    uint8_t index = 0;
+
+    while (str[index] != '\0')
+    {
+        USARTTransmit(str[index]);
+        index++;
+    }
+}
