@@ -19,24 +19,30 @@ SIZE = avr-size
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -Werror -I/usr/local/include
 LDFLAGS = -mmcu=$(MCU) -L/usr/local/lib -lumi
 
+# Build directory
+BUILD_DIR = build
 
 # Targets
 .PHONY: all flash clean size
 
-all: $(TARGET).hex size
+all: $(BUILD_DIR)/$(TARGET).hex size
 
-$(TARGET).elf: $(SRC)
+# Create build directory
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+$(BUILD_DIR)/$(TARGET).elf: $(SRC) | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
-$(TARGET).hex: $(TARGET).elf
+$(BUILD_DIR)/$(TARGET).hex: $(BUILD_DIR)/$(TARGET).elf
 	$(OBJCOPY) -O ihex -R .eeprom $< $@
 
-size: $(TARGET).elf
+size: $(BUILD_DIR)/$(TARGET).elf
 	@echo "Size of $(TARGET).elf:"
 	@$(SIZE) --format=avr --mcu=$(MCU) $<
 
-flash: $(TARGET).hex
+flash: $(BUILD_DIR)/$(TARGET).hex
 	avrdude -p $(MCU) -c $(PROGRAMMER) -P $(PORT) -b $(BAUD) -U flash:w:$<:i
 
 clean:
-	rm -f $(TARGET).elf $(TARGET).hex
+	rm -rf $(BUILD_DIR)

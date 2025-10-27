@@ -1,4 +1,5 @@
 obj/
 lib/
+build/
 .ccls-cache/
 .cache/
