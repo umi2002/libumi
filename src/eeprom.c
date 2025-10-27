@@ -6,10 +6,8 @@ void EEPROMwrite(uint16_t address, uint8_t data) {
   /* Set up address and Data Registers */
   EEAR = address;
   EEDR = data;
-  /* Write logical one to EEMPE */
+  /* Start eeprom write by setting EEMPE and EEPE */
   setPin(&EECR, EEMPE);
-  /* Start eeprom write by setting EEPE */
-  EECR |= (1 << EEPE);
   setPin(&EECR, EEPE);
 }
 
