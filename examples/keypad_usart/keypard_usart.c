@@ -11,4 +11,6 @@ int main() {
     uint8_t key = scanKeypad();
     USARTTransmit(key);
   }
+
+  return 0;
 }

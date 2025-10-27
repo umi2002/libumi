@@ -14,4 +14,6 @@ int main() {
     uint8_t value = EEPROMread(i);
     USARTTransmit(value);
   }
+
+  return 0;
 }
