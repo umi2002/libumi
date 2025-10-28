@@ -7,7 +7,7 @@ F_CPU = 16000000UL
 
 # Programmer settings
 PROGRAMMER = arduino
-PORT = /dev/ttyACM1
+PORT = /dev/ttyACM0
 BAUD = 115200
 
 # Toolchain
