@@ -1,4 +1,5 @@
 #include <avr/io.h>
+#include <util/delay.h>
 
 // utils.c
 void setPin(volatile uint8_t *reg, uint8_t pin);
@@ -18,3 +19,14 @@ void USARTTransmitStr(uint8_t *str);
 // keypad.c
 void keypadInit();
 uint8_t scanKeypad();
+
+// lcd.c
+void pulseEnablePin();
+
+uint8_t readBusyFlag();
+
+void writeInstruction4b(uint8_t instruction);
+
+void writeData4b(uint8_t instruction);
+
+void LCDInit4b();
