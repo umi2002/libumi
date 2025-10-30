@@ -118,8 +118,7 @@ make clean
 Create `my_project.c`:
 
 ```c
-#include <avr/io.h>
-#include <umi.h>
+#include <umi/usart.h>
 
 int main() {
     USARTInit();
