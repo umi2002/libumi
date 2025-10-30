@@ -125,7 +125,7 @@ void LCDInit4b() {
   clearPin(&PORTC, PC0);
   _delay_us(1);
 
-  /* Initialization sequence as instructed by HD44780 docs:
+  /* Initialization sequence as instructed by HD44780 datasheet:
   https://cdn.sparkfun.com/assets/9/5/f/7/b/HD44780.pdf
   Busy flag is not ready during this sequence */
 
