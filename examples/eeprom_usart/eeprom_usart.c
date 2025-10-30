@@ -4,7 +4,7 @@
 int main() {
   USARTInit();
 
-  uint8_t message[] = "This is a message for the eeprom!\n";
+  uint8_t message[] = "This is a message from the eeprom!\n";
 
   for (uint8_t i = 0; i < sizeof(message) / sizeof(message[0]); i++) {
     EEPROMwrite(i, message[i]);
