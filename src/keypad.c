@@ -9,15 +9,19 @@ const char KEYPAD[N_ROWS][N_COLS] = {{'1', '2', '3', 'A'},
                                      {'*', '0', '#', 'D'}};
 
 void keypadInit() {
+  // Set PB0-PB1, PD6-PD7 as output row pins
   setPin(&DDRB, PB0);
   setPin(&DDRB, PB1);
+  setPin(&DDRD, PD6);
+  setPin(&DDRD, PD7);
+
+  // Set PD2-PD5 as input column pins
   clearPin(&DDRD, PD2);
   clearPin(&DDRD, PD3);
   clearPin(&DDRD, PD4);
   clearPin(&DDRD, PD5);
-  setPin(&DDRD, PD6);
-  setPin(&DDRD, PD7);
 
+  // Initialize PD2-PD5 to low
   setPin(&PORTD, PD2);
   setPin(&PORTD, PD3);
   setPin(&PORTD, PD4);
@@ -25,11 +29,13 @@ void keypadInit() {
 }
 
 static void selectRow(uint8_t row) {
+  // Pull all row pins to high
   setPin(&PORTB, PB0);
   setPin(&PORTB, PB1);
   setPin(&PORTD, PD6);
   setPin(&PORTD, PD7);
 
+  // Pull down the selected row pin to low
   switch (row) {
     case 0:
       clearPin(&PORTB, PB1);
@@ -47,6 +53,7 @@ static void selectRow(uint8_t row) {
 }
 
 static uint8_t scanColumns() {
+  // Check if a column pin reads low
   if (!(readPin(&PIND, PD5))) {
     return 1;
   } else if (!(readPin(&PIND, PD4))) {
@@ -61,6 +68,7 @@ static uint8_t scanColumns() {
 }
 
 uint8_t scanKeypad() {
+  // Scan the keypad matrix for a value
   for (uint8_t i = 0; i < N_ROWS; i++) {
     selectRow(i);
     uint8_t col = scanColumns();
