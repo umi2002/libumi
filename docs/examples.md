@@ -38,7 +38,7 @@ make size
 
 ---
 
-## [lcd_4b](examples/lcd_4b/)
+## [lcd_4b](/examples/lcd_4b/)
 
 ### Description
 
@@ -46,7 +46,7 @@ Demonstrates LCD initialization and display in 4-bit mode operation.
 
 ---
 
-## [keypad_usart](examples/keypad_usart/)
+## [keypad_usart](/examples/keypad_usart/)
 
 ### Description
 
@@ -54,7 +54,7 @@ Demonstrates keypad scanning with serial output.
 
 ---
 
-## [eeprom_usart](examples/eeprom_usart/)
+## [eeprom_usart](/examples/eeprom_usart/)
 
 ### Description
 

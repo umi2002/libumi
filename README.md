@@ -59,8 +59,6 @@ make flash
 - **keypad_usart** - Keypad input with serial output
 - **eeprom_usart** - EEPROM read/write with serial interface
 
-See [examples/README.md](examples/README.md) for detailed information.
-
 ## Project Structure
 
 ```

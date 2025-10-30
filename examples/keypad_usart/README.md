@@ -9,7 +9,7 @@ Demonstrates keypad scanning with serial output.
 - USB cable (for serial communication)
 - Jumper wires
 
-See [hardware-setup.md](docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
+See [hardware-setup.md](/docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
 
 ## Building and Flashing
 

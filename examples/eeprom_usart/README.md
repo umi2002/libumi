@@ -9,7 +9,7 @@ Demonstrates EEPROM read/write operations with serial output.
 
 **No external components required!**
 
-See [hardware-setup.md](docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
+See [hardware-setup.md](/docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
 
 ## Building and Flashing
 

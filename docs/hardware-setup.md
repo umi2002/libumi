@@ -5,7 +5,7 @@ This guide covers the wiring and pin configurations for all libumi modules.
 ## Table of Contents
 
 - [ATmega328P Pinout](#atmega328p-pinout)
-- [LCD Display (16x2)](<#lcd-display-(16x2)>)
+- [LCD Display (16x2)](#lcd-display-16x2)
 - [4x4 Matrix Keypad](#4x4-matrix-keypad)
 - [USART Serial](#usart-serial)
 
@@ -13,7 +13,7 @@ This guide covers the wiring and pin configurations for all libumi modules.
 
 ## ATmega328P Pinout
 
-https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf
+https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#G1176667
 
 ---
 

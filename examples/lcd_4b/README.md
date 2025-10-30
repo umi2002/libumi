@@ -10,7 +10,7 @@ Demonstrates LCD initialization and display in 4-bit mode operation.
 - Jumper wires
 - Breadboard
 
-See [hardware-setup.md](docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
+See [hardware-setup.md](/docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
 
 ## Building and Flashing
 
