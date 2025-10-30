@@ -1,6 +1,6 @@
 # libumi
 
-My homebrew library for AVR microcontrollers (ATmega328P) providing easy-to-use interfaces for common peripherals and components.
+My homebrew C library for AVR microcontrollers (ATmega328P) providing easy-to-use interfaces for common peripherals and components.
 
 ## Features
 
