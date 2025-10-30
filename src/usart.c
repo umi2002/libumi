@@ -10,7 +10,6 @@ void USARTInit() {
   setPin(&UCSR0B, RXEN0);
 
   // Frame format: 8 data, 1 stop bit
-  // UCSR0C |= (1 << UCSZ00) | (1 << UCSZ01) | (1 << UCSZ02);
   clearPin(&UCSR0C, USBS0);
   setPin(&UCSR0C, UCSZ00);
   setPin(&UCSR0C, UCSZ01);
