@@ -121,7 +121,7 @@ USART uses the built-in serial pins of the ATmega328P.
 
 If programming via Arduino UNO, the USB is already connected to PD0/PD1, so no additional wiring is needed for serial communication.
 
-### Monitoring Serial Output
+### Serial Communication
 
 #### Configuration
 
@@ -140,6 +140,9 @@ stty -F /dev/ttyACM0 \
   -parenb \
   raw \
 
+// Write
+echo "Hello" > /dev/ttyACM0
+// Read
 cat /dev/ttyACM0 9600
 ```
 

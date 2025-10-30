@@ -7,7 +7,8 @@ This document provides an overview of all example programs included with libumi.
 - [Overview](#overview)
 - [lcd_4b](#lcd_4b)
 - [keypad_usart](#keypad_usart)
-- [eeprom_usart](#eeprom_usart)
+- [eeprom_to_usart](#eeprom_to_usart)
+- [usart_to_eeprom](#usart_to_eeprom)
 
 ---
 
@@ -54,8 +55,16 @@ Demonstrates keypad scanning with serial output.
 
 ---
 
-## [eeprom_usart](/examples/eeprom_usart/)
+## [eeprom_to_usart](/examples/eeprom_to_usart/)
 
 ### Description
 
-Demonstrates EEPROM read/write operations with serial output.
+Demonstrates EEPROM read operations with serial output.
+
+---
+
+## [usart_to_eeprom](/examples/usart_to_eeprom/)
+
+### Description
+
+Demonstrates EEPROM write operations with serial input.

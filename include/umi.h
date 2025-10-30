@@ -7,4 +7,6 @@
 #include "umi/usart.h"
 #include "umi/utils.h"
 
+#define F_CPU 16000000UL  // 16 MHz
+
 #endif  // UMI_H

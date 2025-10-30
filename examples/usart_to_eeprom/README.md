@@ -1,6 +1,6 @@
-# EEPROM USART Example
+# EEPROM to USART Example
 
-Demonstrates EEPROM read/write operations with serial output.
+Demonstrates EEPROM read operations with serial output.
 
 ## Hardware Requirements
 
@@ -27,9 +27,12 @@ make clean
 ## Expected Behavior
 
 1. Open serial monitor at 9600 baud
-2. You'll immediately see: "This is a message from the eeprom!"
+2. Type anything you want into the serial monitor
+3. What you typed should be written to the EEPROM.
 
-## Monitoring Serial Output
+**\*Note:** You can try the [eeprom_to_usart](/examples/eeprom_to_usart/) example to test the behavior.
+
+## Serial Communication
 
 **Bash:**
 
@@ -41,6 +44,9 @@ stty -F /dev/ttyACM0 \
   -parenb \
   raw \
 
+// Write
+echo "Hello" > /dev/ttyACM0
+// Read
 cat /dev/ttyACM0 9600
 ```
 

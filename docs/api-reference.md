@@ -119,6 +119,22 @@ USARTInit();
 
 ---
 
+### `uint8_t USARTReceive()`
+
+Receives a single byte over USART. This operation is blocking.
+
+**Returns:**
+
+- Byte value received by USART
+
+**Example:**
+
+```c
+uint8_t value = USARTReceive();
+```
+
+---
+
 ### `void USARTTransmit(uint8_t data)`
 
 Transmits a single byte over USART.

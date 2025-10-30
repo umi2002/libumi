@@ -57,7 +57,8 @@ make flash
 
 - **lcd_4b** - 4-bit mode LCD display demonstration
 - **keypad_usart** - Keypad input with serial output
-- **eeprom_usart** - EEPROM read/write with serial interface
+- **eeprom_to_usart** - EEPROM read with serial interface
+- **usart_to_eeprom** - EEPROM write with serial interface
 
 ## Usage
 

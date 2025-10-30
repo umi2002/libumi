@@ -5,6 +5,8 @@
 #include <umi/utils.h>
 #include <util/delay.h>
 
+#define EEPROM_SIZE 1024  // 1 kB
+
 void EEPROMwrite(uint16_t address, uint8_t data);
 uint8_t EEPROMread(uint16_t address);
 

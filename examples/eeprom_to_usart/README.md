@@ -1,13 +1,13 @@
-# Keypad USART Example
+# EEPROM to USART Example
 
-Demonstrates keypad scanning with serial output.
+Demonstrates EEPROM read operations with serial output.
 
 ## Hardware Requirements
 
 - ATmega328P (Arduino UNO)
-- 4x4 matrix keypad
 - USB cable (for serial communication)
-- Jumper wires
+
+**No external components required!**
 
 See [hardware-setup.md](/docs/hardware-setup.md#lcd-display-16x2) for complete hardware setup.
 
@@ -26,10 +26,10 @@ make clean
 
 ## Expected Behavior
 
-1. Open a serial monitor at 9600 baud
-2. You'll see: "Keypad USART example started!"
-3. Press any key on the keypad
-4. The key is transmitted as a byte
+1. Open serial monitor at 9600 baud
+2. You should see the entire contents of the EEPROM\*
+
+**\*Note:** You can try the [usart_to_eeprom](/examples/usart_to_eeprom/) example to test the behavior.
 
 ## Serial Communication
 

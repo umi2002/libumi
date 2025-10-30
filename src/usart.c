@@ -1,12 +1,15 @@
 #include "umi/usart.h"
 
+#include "umi/utils.h"
+
 void USARTInit() {
-  // Baud rate = 9600 at F_OSC = 16MHz, normal speed
-  UBRR0H = (uint8_t)(103 >> 8);
-  UBRR0L = (uint8_t)(103);
+  // Set baud rate using calculated UBRR value
+  UBRR0H = (uint8_t)(UBRR_VALUE >> 8);
+  UBRR0L = (uint8_t)(UBRR_VALUE);
 
   // Enable transmitter
   setPin(&UCSR0B, TXEN0);
+  // Enable Receiver
   setPin(&UCSR0B, RXEN0);
 
   // Frame format: 8 data, 1 stop bit
@@ -16,9 +19,17 @@ void USARTInit() {
   clearPin(&UCSR0B, UCSZ02);
 }
 
+uint8_t USARTReceive() {
+  // Wait for data to be received
+  while (!readPin(&UCSR0A, RXC0));
+
+  // Return data from buffer
+  return UDR0;
+}
+
 void USARTTransmit(uint8_t data) {
   // Wait for empty transmit buffer
-  while (!(UCSR0A & (1 << UDRE0)));
+  while (!readPin(&UCSR0A, UDRE0));
 
   // Put data into buffer, sends the data
   UDR0 = data;
