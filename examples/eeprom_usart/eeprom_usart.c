@@ -1,5 +1,5 @@
-#include <stdint.h>
-#include <umi.h>
+#include <umi/eeprom.h>
+#include <umi/usart.h>
 
 int main() {
   USARTInit();

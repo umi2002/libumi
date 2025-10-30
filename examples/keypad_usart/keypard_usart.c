@@ -1,4 +1,5 @@
-#include <umi.h>
+#include <umi/keypad.h>
+#include <umi/usart.h>
 
 int main() {
   USARTInit();

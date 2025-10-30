@@ -1,4 +1,4 @@
-#include "umi.h"
+#include "umi/keypad.h"
 
 #define N_ROWS 4
 #define N_COLS 4

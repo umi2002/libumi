@@ -59,12 +59,37 @@ make flash
 - **keypad_usart** - Keypad input with serial output
 - **eeprom_usart** - EEPROM read/write with serial interface
 
+## Usage
+
+### Include All Modules
+
+```c
+#include <umi.h>
+```
+
+### Include Specific Modules
+
+```c
+#include <umi/usart.h>
+#include <umi/lcd.h>
+```
+
+### Available Modules
+
+- `<umi/utils.h>`
+- `<umi/usart.h>`
+- `<umi/eeprom.h>`
+- `<umi/keypad.h>`
+- `<umi/lcd.h>`
+
 ## Project Structure
 
 ```
 libumi/
 ├── src/              # Library source code
-├── include/          # Public header files
+├── include/
+│   ├── umi.h         # Main header (includes all modules)
+│   └── umi/          # Individual module headers
 ├── examples/         # Example programs
 ├── docs/             # Documentation
 ├── obj/              # Build artifacts (generated)

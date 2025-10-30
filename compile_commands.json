@@ -28,6 +28,42 @@
       "-Iinclude",
       "-c",
       "-o",
+      "obj/keypad.o",
+      "src/keypad.c"
+    ],
+    "directory": "/home/umi/code/libumi",
+    "file": "/home/umi/code/libumi/src/keypad.c",
+    "output": "/home/umi/code/libumi/obj/keypad.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-mmcu=atmega328p",
+      "-DF_CPU=16000000UL",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/lcd.o",
+      "src/lcd.c"
+    ],
+    "directory": "/home/umi/code/libumi",
+    "file": "/home/umi/code/libumi/src/lcd.c",
+    "output": "/home/umi/code/libumi/obj/lcd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/avr-gcc",
+      "-mmcu=atmega328p",
+      "-DF_CPU=16000000UL",
+      "-Os",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-c",
+      "-o",
       "obj/usart.o",
       "src/usart.c"
     ],

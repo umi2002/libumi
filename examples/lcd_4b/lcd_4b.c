@@ -1,4 +1,4 @@
-#include <umi.h>
+#include <umi/lcd.h>
 
 int main() {
   LCDInit4b();

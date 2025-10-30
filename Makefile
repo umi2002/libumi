@@ -16,8 +16,8 @@ AVRDUDE = avrdude
 CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -Iinclude
 
 # System directories
-SYS_LIB = /usr/local/lib/
-SYS_INC = /usr/local/include/
+SYS_LIB = /usr/local/lib
+SYS_INC = /usr/local/include
 
 # Directories
 SRC_DIR = src
@@ -55,8 +55,11 @@ clean:
 install: $(LIB_DIR)/$(LIB_NAME)
 	cp $(LIB_DIR)/$(LIB_NAME) $(SYS_LIB)
 	cp $(INC_DIR)/umi.h $(SYS_INC)
+	mkdir -p $(SYS_INC)/umi
+	cp $(INC_DIR)/umi/*.h $(SYS_INC)/umi/
 
 # Uninstall library
 uninstall:
 	rm -f $(SYS_LIB)/$(LIB_NAME)
 	rm -f $(SYS_INC)/umi.h
+	rm -rf $(SYS_INC)/umi/

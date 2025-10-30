@@ -1,4 +1,4 @@
-#include "umi.h"
+#include "umi/eeprom.h"
 
 void EEPROMwrite(uint16_t address, uint8_t data) {
   /* Wait for completion of previous write */

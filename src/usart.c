@@ -1,4 +1,4 @@
-#include "umi.h"
+#include "umi/usart.h"
 
 void USARTInit() {
   // Baud rate = 9600 at F_OSC = 16MHz, normal speed

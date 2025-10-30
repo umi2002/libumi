@@ -1,4 +1,4 @@
-#include "umi.h"
+#include "umi/utils.h"
 
 void setPin(volatile uint8_t *reg, uint8_t pin) { *reg |= (1 << pin); }
 
