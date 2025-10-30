@@ -28,7 +28,7 @@ make clean
 
 1. Open serial monitor at 9600 baud
 2. Type anything you want into the serial monitor
-3. What you typed should be written to the EEPROM.
+3. What you typed should be written to the EEPROM
 
 **\*Note:** You can try the [eeprom_to_usart](/examples/eeprom_to_usart/) example to test the behavior.
 
