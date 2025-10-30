@@ -1,6 +1,6 @@
-# EEPROM to USART Example
+# USART to EEPROM Example
 
-Demonstrates EEPROM read operations with serial output.
+Demonstrates EEPROM write operations with serial input.
 
 ## Hardware Requirements
 
